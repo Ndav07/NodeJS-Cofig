@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ndav07/NodeJS-with-TS-TDD-DDD-and-Clean-Architecture/issues"
   },
-  "homepage": "https://github.com/Ndav07/NodeJS-with-TS-TDD-DDD-and-Clean-Architecture#readme"
+  "homepage": "https://github.com/Ndav07/NodeJS-with-TS-TDD-DDD-and-Clean-Architecture#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.2.1"
+  }
 }
