@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Ndav07/NodeJS-with-TS-TDD-DDD-and-Clean-Architecture#readme",
   "devDependencies": {
-    "git-commit-msg-linter": "^4.2.1"
+    "@types/node": "^18.11.7",
+    "git-commit-msg-linter": "^4.2.1",
+    "typescript": "^4.8.4"
   }
 }
