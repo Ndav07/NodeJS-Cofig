@@ -1,10 +1,10 @@
 interface HttpRequest {
-  body?: any;
-};
+  body?: any
+}
 
 interface HttpResponse {
-  statusCode: number;
-  body: any;
-};
+  statusCode: number
+  body: any
+}
 
-export { HttpRequest, HttpResponse };
+export { HttpRequest, HttpResponse }
