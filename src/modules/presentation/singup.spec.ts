@@ -1,5 +1,5 @@
-import { SignUpController } from "@modules/presentation/controllers/singup"
-import { MissingParamError } from "../erros/missing-param-error"
+import { SignUpController } from "@modules/presentation/singup"
+import { MissingParamError } from "./erros/missing-param-error"
 
 describe('SignUp Controller', () => {
   let sut: SignUpController
