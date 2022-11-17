@@ -1,14 +1,12 @@
 export default {
   bail: true,
   clearMocks: true,
-  coverageProvider: "babel",
+  coverageProvider: "v8",
+  coverageDirectory: "coverage",
   moduleNameMapper: {
-    "@modules/(.*)": "<rootDir>/src/modules/$1",
-    "@config/(.*)": "<rootDir>/src/config/$1",
-    "@shared/(.*)": "<rootDir>/src/shared/$1",
-    "@utils/(.*)": "<rootDir>/src/utils/$1",
+    "@/(.*)": "<rootDir>/src/$1",
   },
-  preset: "ts-jest",
   testEnvironment: "node",
+  preset: "ts-jest",
   testMatch: [ "**/*.spec.ts" ],
 };

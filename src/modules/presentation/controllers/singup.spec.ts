@@ -1,7 +1,7 @@
-import { SignUpController } from "@modules/presentation/controllers/singup"
-import { InvalidParamError } from "../erros/invalid-param-error"
-import { MissingParamError } from "../erros/missing-param-error"
-import { EmailValidor } from "../protocols/email-validor"
+import { SignUpController } from '@/modules/presentation/controllers/singup'
+import { InvalidParamError } from '../erros/invalid-param-error'
+import { MissingParamError } from '../erros/missing-param-error'
+import { EmailValidor } from '../protocols/email-validor'
 
 interface SutTypes {
   sut: SignUpController
@@ -18,10 +18,9 @@ const makeSut = (): SutTypes => {
   const sut = new SignUpController(emailValidatorStub)
   return {
     sut,
-    emailValidatorStub
+    emailValidatorStub,
   }
 }
-
 
 describe('SignUp Controller', () => {
   it('should return 400 if no name is provide', () => {
@@ -77,7 +76,9 @@ describe('SignUp Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
+    expect(httpResponse.body).toEqual(
+      new MissingParamError('passwordConfirmation')
+    )
   })
 
   it('Should return 400 if an invalid email is provided', () => {
@@ -88,8 +89,8 @@ describe('SignUp Controller', () => {
         name: 'any_name',
         email: 'invalid_email@mail.com',
         password: 'any_password',
-        passwordConfirmation: 'any_password'
-      }
+        passwordConfirmation: 'any_password',
+      },
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)

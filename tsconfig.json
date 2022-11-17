@@ -1,15 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "incremental": true,
+    "target": "es5",
     "module": "commonjs",
-    "outDir": "./dist",
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "removeComments": true,
     "rootDir": "./",
     "baseUrl": "./src",
     "paths": {
-      "@modules/*": ["modules/*"],
-      "@config/*": ["config/*"],
-      "@shared/*": ["shared/*"],
-      "@utils/*": ["utils/*"],
+      "@/*": ["*"],
     },
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    //"noImplicitAny": true,
+    //"strictNullChecks": true,
+    
   }
 }

@@ -1,6 +1,6 @@
 {
     "env": {
-        "es2019": true,
+        "es2017": true,
         "node": true,
         "jest": true
     },
