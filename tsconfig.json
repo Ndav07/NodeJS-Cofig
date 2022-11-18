@@ -21,6 +21,7 @@
     "strict": true,
     //"noImplicitAny": true,
     //"strictNullChecks": true,
-    
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
   }
 }
